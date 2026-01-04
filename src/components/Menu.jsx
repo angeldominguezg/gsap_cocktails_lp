@@ -27,13 +27,13 @@ const Menu = () => {
 	.timeline({
 	 scrollTrigger: {
 		trigger: "#menu",
-		start: "top top",
+		start: "top bottom",
 		end: "bottom top",
-		scrub: true,
+		scrub: 1,
 	 },
 	})
-	.to("#m-right-leaf", { y: -200 }, 0)
-	.to("#m-left-leaf", { y: 200 }, 0)
+	.fromTo("#m-right-leaf", { yPercent: -50 }, { yPercent: 50, ease: "none" }, 0)
+	.fromTo("#m-left-leaf", { yPercent: 50 }, { yPercent: -50, ease: "none" }, 0)
  }, [])
 
 
